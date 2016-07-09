@@ -1,6 +1,8 @@
 package com.wen.test;
 
-import com.wen.common.utils.HttpUtils;
+
+
+import com.wen.utils.HttpUtils;
 
 import java.util.HashMap;
 import java.util.Map;
