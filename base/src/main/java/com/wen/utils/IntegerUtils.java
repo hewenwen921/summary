@@ -1,4 +1,4 @@
-package com.wen.common.utils;
+package com.wen.utils;
 
 /**
  * Created by hcw on 16-3-16.

@@ -1,6 +1,4 @@
-package com.wen.common.utils;
-
-import com.alibaba.fastjson.JSONObject;
+package com.wen.utils;
 
 /**
  * Created by Administrator on 2016/6/15.

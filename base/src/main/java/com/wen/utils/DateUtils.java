@@ -1,4 +1,4 @@
-package com.wen.common.utils;
+package com.wen.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;
