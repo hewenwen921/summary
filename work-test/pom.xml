@@ -47,12 +47,6 @@
             <artifactId>elasticsearch</artifactId>
             <version>2.2.0</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.wen</groupId>
-            <artifactId>base</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -64,6 +58,11 @@
             <artifactId>jsp-api</artifactId>
             <version>2.1</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.wen</groupId>
+            <artifactId>base</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
     <build>
