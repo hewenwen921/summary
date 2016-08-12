@@ -11,8 +11,6 @@
     <modules>
         <module>work-test</module>
         <module>dev-prod</module>
-        <module>ww</module>
-        <module>ss</module>
-        <module>ss</module>
+        <module>mybatis</module>
     </modules>
 </project>

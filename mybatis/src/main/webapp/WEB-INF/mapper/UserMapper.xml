@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wen.dao.UserMapper">
+    <resultMap id="userInfoMap" type="userInfo">
+        <id property="userId" column="user_id"/>
+        <result property="loginName" column="login_name"/>
+        <result property="password" column="login_password"/>
+        <result property="realName" column="real_name"/>
+        <result property="sex" column="sex"/>
+        <result property="phone" column="phone"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+    <insert id="addUser" parameterType="userInfo">
+        <![CDATA[
+
+		INSERT INTO user(login_name,
+			login_password,
+			dept_id,
+			real_name,
+			sex,
+			phone,
+			remark)
+		VALUES(#{loginName},#{password},#{deptId},#{realName},#{sex},#{phone},#{remark})
+
+        ]]>
+    </insert>
+
+</mapper>

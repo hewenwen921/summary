@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../asserts/js/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+<input type="button" value="a" id="r">
+</body>
+</html>
+<script>
+    $("#r").click(function(){
+        var str = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx14345a8002bb1e99&amp;redirect_uri=http%3A%2F%2Ftestwx.zcckj.com%2Fu%2Fweb%2Fwx%2Fcommon%2Fredirect.htm%3Furl%3D%2Fweb%2Fwx%2Fmember%2Flucky%2Findex%2F25&amp;response_type=code&amp;scope=snsapi_base&amp;state=wx#wechat_redirect";
+        console.log(str.replace(new RegExp("&amp;","g"),"&"));
+    });
+
+</script>
