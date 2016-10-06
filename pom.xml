@@ -12,5 +12,7 @@
         <module>work-test</module>
         <module>dev-prod</module>
         <module>mybatis</module>
+        <module>../weChat</module>
+        <module>weChat</module>
     </modules>
 </project>
