@@ -17,7 +17,7 @@
         <context:include-filter type="annotation"
                                 expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
     </context:component-scan>
-
+    <context:property-placeholder location="classpath*:/wechat.properties" ignore-resource-not-found="true" ignore-unresolvable="true" />
     <!--过滤资源文件
     <mvc:resources location="/asserts" mapping="**"/>-->
 

@@ -1,4 +1,4 @@
-package com.wen;
+package com.wen.controller;
 
 import com.wen.utils.wechat.SignUtil;
 import org.springframework.stereotype.Controller;
