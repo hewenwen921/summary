@@ -1,3 +1,4 @@
+/*
 package com.wen.controller;
 
 import com.wen.controller.dto.UserDto;
@@ -12,12 +13,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+*/
 /**
  * Created by Administrator on 2016/6/7.
- */
+ *//*
+
 @Controller
 @RequestMapping("/mvc")
-public class MVCParameter {
+public classss MVCParameter {
 
     @RequestMapping(value = "/form", method = RequestMethod.POST)
     public String formSubmit(UserDto userDto) {
@@ -56,3 +59,4 @@ public class MVCParameter {
         System.out.println(name);
     }
 }
+*/

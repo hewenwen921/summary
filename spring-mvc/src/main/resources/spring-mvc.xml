@@ -17,16 +17,16 @@
         <context:include-filter type="annotation"
                                 expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
     </context:component-scan>
-
+    <context:property-placeholder location="classpath*:/wechat.properties" ignore-resource-not-found="true" ignore-unresolvable="true" />
     <!--过滤资源文件
     <mvc:resources location="/asserts" mapping="**"/>-->
 
 
-    <!-- 视图解析器:定义跳转的文件的前后缀 -->
+    <!-- 视图解析器:定义跳转的文件的前后缀
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
-        <property name="suffix" value=".jsp" />  <!--可为空,方便实现自已的依据扩展名来选择视图解释类的逻辑  -->
-    </bean>
+        <property name="suffix" value=".jsp" />
+    </bean>-->
 
     <!--<mvc:annotation-driven>
         <mvc:message-converters register-defaults="true">
