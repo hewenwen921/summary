@@ -62,11 +62,6 @@
             <version>2.1</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.wen</groupId>
-            <artifactId>base</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
     <build>
         <finalName>work-test</finalName>
