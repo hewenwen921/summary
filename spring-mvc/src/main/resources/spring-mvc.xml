@@ -22,11 +22,11 @@
     <mvc:resources location="/asserts" mapping="**"/>-->
 
 
-    <!-- 视图解析器:定义跳转的文件的前后缀
+    <!-- 视图解析器:定义跳转的文件的前后缀-->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/" />
-        <property name="suffix" value=".jsp" />
-    </bean>-->
+        <property name="prefix" value="/WEB-INF/html/" />
+        <property name="suffix" value=".html" />
+    </bean>
 
     <!--<mvc:annotation-driven>
         <mvc:message-converters register-defaults="true">

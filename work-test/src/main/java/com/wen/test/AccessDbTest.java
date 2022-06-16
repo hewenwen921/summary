@@ -1,7 +1,7 @@
 package com.wen.test;
 
-import com.healthmarketscience.jackcess.*;
-import org.hsqldb.types.Types;
+//import com.healthmarketscience.jackcess.*;
+//import org.hsqldb.types.Types;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,59 +28,59 @@ public class AccessDbTest {
         FILE_PATH = AccessDbTest.class.getResource("/db/test.accdb").getPath();
     }
 
-    public static void main(String[] args) throws IOException {
-        AccessDbTest.getAccessDataTable();
-//        AccessTest.createTable();
-    }
+//    public static void main(String[] args) throws IOException {
+//        AccessDbTest.getAccessDataTable();
+////        AccessTest.createTable();
+//    }
 
     /**
      * 读取指定表格
      *
      * @throws IOException
      */
-    public static void getAccessDataTable() throws IOException {
-        Table table = DatabaseBuilder.open(new File(FILE_PATH)).getTable("class");
-        for (Row row : table) {
-            System.out.println("--ID--" + row.get("ID") + "，--Name--" + row.get("name"));
-        }
-    }
+//    public static void getAccessDataTable() throws IOException {
+//        Table table = DatabaseBuilder.open(new File(FILE_PATH)).getTable("class");
+//        for (Row row : table) {
+//            System.out.println("--ID--" + row.get("ID") + "，--Name--" + row.get("name"));
+//        }
+//    }
 
     /**
      * 创建表并写入数据
      *
      * @throws IOException
      */
-    public static void createTable() throws IOException {
-        Database db = DatabaseBuilder.open(new File(FILE_PATH));
-        Table newTable;
-        try {
-            newTable = new TableBuilder("NewTable")
-                    .addColumn(new ColumnBuilder("id")
-                            .setSQLType(Types.INTEGER))
-                    .addColumn(new ColumnBuilder("name")
-                            .setSQLType(Types.VARCHAR))
-                    .toTable(db);
-            newTable.addRow(1, "foo");
-            System.out.println("创建成功");
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+//    public static void createTable() throws IOException {
+//        Database db = DatabaseBuilder.open(new File(FILE_PATH));
+//        Table newTable;
+//        try {
+//            newTable = new TableBuilder("NewTable")
+//                    .addColumn(new ColumnBuilder("id")
+//                            .setSQLType(Types.INTEGER))
+//                    .addColumn(new ColumnBuilder("name")
+//                            .setSQLType(Types.VARCHAR))
+//                    .toTable(db);
+//            newTable.addRow(1, "foo");
+//            System.out.println("创建成功");
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//    }
 
     /**
      * 删除一条数据
      *
      * @throws IOException
      */
-    public static void deleteRec() throws IOException {
-        Table table = DatabaseBuilder.open(new File(FILE_PATH)).getTable("NewTable22");
-        Row row = CursorBuilder.findRow(table, Collections.singletonMap("xh", "4"));
-        if (row != null) {
-            System.out.println("Found row where 'a' == 'foo': " + row);
-            table.deleteRow(row);
-        } else {
-            System.out.println("Could not find row where 'a' == 'foo'");
-        }
-    }
+//    public static void deleteRec() throws IOException {
+//        Table table = DatabaseBuilder.open(new File(FILE_PATH)).getTable("NewTable22");
+//        Row row = CursorBuilder.findRow(table, Collections.singletonMap("xh", "4"));
+//        if (row != null) {
+//            System.out.println("Found row where 'a' == 'foo': " + row);
+//            table.deleteRow(row);
+//        } else {
+//            System.out.println("Could not find row where 'a' == 'foo'");
+//        }
+//    }
 }
