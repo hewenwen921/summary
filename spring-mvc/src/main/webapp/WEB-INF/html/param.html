@@ -6,8 +6,15 @@
     <script type="application/javascript" src="../../asserts/js/jquery.js"></script>
 </head>
 <body>
-    adfadfaf999
-<input type="button" id="add" value="添加"/>
+    <h4>各种提交方式的数据验证</h4>
+    <div>
+        <ul>
+            <p>ajax异步post提交</p>
+            <input type="button" id="add" value="添加"/>
+        </ul>
+
+    </div>
+
 <input type="button" id="json" value="json"/>
 </body>
 <script>
@@ -17,7 +24,12 @@
             url: "save.htm",
             data: {"sn":"123","phone":"1373548123"},
             success: function (data) {
+                alert(data)
                 console.log(data);
+            },
+            error:function(xhr){
+                console.log(xhr.responseText);
+               // alert(xhr.)
             }
         });
     });
