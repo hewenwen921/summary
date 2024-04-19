@@ -4,11 +4,13 @@ package com.wen.controller;
 import com.wen.controller.dto.UserDto;
 import com.wen.domain.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -28,12 +30,13 @@ public class ParamController {
     }
 
 
-    @RequestMapping(value = "/form", method = RequestMethod.POST)
-    public String formSubmit(UserDto userDto) {
-        System.out.println("用户名" + userDto.getUserName());
-        System.out.println("密码" + userDto.getPassword());
+    @ResponseBody
+    @RequestMapping(value = "/object", method = RequestMethod.POST)
+    public String formSubmit(List<UserDto> userDtoList) {
+//        System.out.println("用户名" + userDto.getUserName());
+//        System.out.println("密码" + userDto.getPassword());
 
-        return "index.jsp";
+        return "ok";
     }
 
 

@@ -10,15 +10,15 @@
     <div>
         <ul>
             <p>ajax异步post提交</p>
-            <input type="button" id="add" value="添加"/>
+            <input type="button" id="save" value="json提交，单个接收"/><br/>
+            <input type="button" id="object" value="json提交，对象接收"/><br/>
         </ul>
-
     </div>
 
 <input type="button" id="json" value="json"/>
 </body>
 <script>
-    $("#add").click(function () {
+    $("#save").click(function () {
         $.ajax({
             type: "POST",
             url: "save.htm",
@@ -34,12 +34,12 @@
         });
     });
 
-    $("#json").click(function () {
-        var data={"sn":"123","phone":"1373548123","name":"wen"};
+    $("#object").click(function () {
+        var data=[{"password":"123","userName":"wen"}];
         $.ajax({
             type: "POST",
-            url: "json.htm",
-            contentType:"application/json",
+            url: "object.htm",
+            //contentType:"application/json",
             data: data,
             success: function (data) {
                 console.log(data);
